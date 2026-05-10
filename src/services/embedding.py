@@ -1,10 +1,10 @@
 from langchain_community.embeddings import HuggingFaceEmbeddings
 import numpy as np
+from src.utils.embed_model import get_model
+
 
 #Initialize once (global)
-embedding_model = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
+embedding_model = get_model()
 
 def get_embedding(texts):
     if isinstance(texts, str):

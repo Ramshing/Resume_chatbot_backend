@@ -1,6 +1,7 @@
 
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_community.embeddings import HuggingFaceEmbeddings
+from src.utils.embed_model import get_model
 from langchain_core.documents import Document
 
 # def structure_to_documents(structured_data):
@@ -372,9 +373,7 @@ def structure_to_documents(structured_data):
 def apply_semantic_chunking(documents):
 
     #Use SentenceTransformer via LangChain wrapper
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
-    )
+    embeddings = get_model()
 
     splitter = SemanticChunker(
         embeddings,

@@ -3,7 +3,6 @@ from src.database.db_connections import get_connection, release_connection
 from src.services.embedding import get_embedding
 from src.utils.generate_hash import generate_file_hash
 from src.services.doc_struct_semantic_chunking import chunk_resume_pipeline
-from src.utils.llm_parser import model
 from src.utils.llm_groq import call_llm, clean_json
 from src.utils.generate_hash import generate_file_hash
 from PIL import Image
