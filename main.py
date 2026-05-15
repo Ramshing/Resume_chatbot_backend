@@ -16,7 +16,7 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",   # React frontend
     "http://127.0.0.1:3000",
-    "https://resume-chatbot-frontend-alpha.vercel.app"  
+    "https://resume-chatbot-frontend-alpha.vercel.app/" 
 ]
 
 app.add_middleware(
